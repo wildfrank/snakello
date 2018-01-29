@@ -20,7 +20,7 @@ import unidecode
 import datetime
 import sys
 
-_RVU = '0.0.10'
+_RVU = '0.0.11'
 _varsnakestatus = 0
 _vtrello = 0
 _vtrello_app_key =''
@@ -1332,6 +1332,11 @@ def fmetric():
 			s = raw_input('snakello.metric --: ')
 			
 			if s == 'wic':
+			
+				recline1 = ''
+				recline2 = ''
+				rechead1 = ''
+				rechead2 = ''
 			
 				if _vwicfile == '':
 					print("_vwicfile not initialized in % s" % _vfilename)
