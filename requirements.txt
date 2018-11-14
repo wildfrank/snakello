@@ -2,7 +2,7 @@ certifi==2017.4.17
 chardet==3.0.4
 cx-Freeze==5.0.2
 idna==2.5
-requests==2.18.1
+requests==2.20.1
 trello==0.9.1
 Unidecode==0.4.21
 urllib==1.21.1
