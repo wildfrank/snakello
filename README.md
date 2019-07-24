@@ -13,5 +13,5 @@ See `docs/notes.txt`
 `py snakello.py`
 	
 ## Dependences
-It needs Python 2.7.13
+It needs Python 2.7.13 or above
 See `requirements.txt`

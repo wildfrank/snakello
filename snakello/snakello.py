@@ -1,6 +1,6 @@
 # snakello.py
 #
-# Copyright (C) 2017-2018 Gianfranco Pampado
+# Copyright (C) 2017-2019 Gianfranco Pampado
 # All rights reserved.
 #	
 # Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met:
@@ -937,13 +937,14 @@ def fsnakeprintid():
 			cards = _vtrello.lists.get_card(cl[i][u'id'])
 			
 			for j in range( len(cards) ):
-				cardinfo.append(cards[j][u'dateLastActivity'])
-				cardinfo.append(cards[j][u'name'])
-				cardinfo.append(cards[j][u'id'])
-				cardinfo.append(cl[i][u'name'])
-				# print cardinfo
-				listofcard.append(cardinfo)
-				cardinfo = []
+				if cards[j][u'id'] not in _vexcluded_card:
+					cardinfo.append(cards[j][u'dateLastActivity'])
+					cardinfo.append(cards[j][u'name'])
+					cardinfo.append(cards[j][u'id'])
+					cardinfo.append(cl[i][u'name'])
+					# print cardinfo
+					listofcard.append(cardinfo)
+					cardinfo = []
 				
 	for i in range(len(listofcard)):
 		print "Card [", unidecode.unidecode(listofcard[i][1]), "]", "in the list [", listofcard[i][3], "]", "has id", "[", listofcard[i][2], "]"
