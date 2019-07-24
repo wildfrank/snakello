@@ -1,7 +1,8 @@
 My point starting point of reference is here:
 	https://gist.github.com/ricpol/2ca0ae46f02bfddf08036fa85519aa97
 	
-I use Python 2.7.13 because I started this experiences with the Python API for Trello that seems to work well with this version.
+I used Python 2.7.13 because I started this experiences with the Python API for Trello that seems to work well with thats version.
+RVU 0.0.12 has been tested with Python 2.7.15.
 The documentation of Python 2.7 is here:
 	https://docs.python.org/2.7/
 
@@ -9,10 +10,10 @@ I want use Git as version control system.
 
 I use:
 	Python library for interacting with the Trello API: 
-		https://pypi.python.org/pypi/trello/0.9.1
+		https://pypi.org/project/trello/0.9.3/
 	This Python API is a wrapper around the Trello API.
 	You can find documentation for the Python API at:
-		http://packages.python.org/trello/
+		https://pythonhosted.org/trello/
 	See this README:
 		https://github.com/tghw/trello-py/blob/master/README.md
 	

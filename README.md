@@ -1,4 +1,4 @@
-# snakello 0.0.11
+# snakello 0.0.12
 **snakello** is an interface to Trello.
 **snakello** is distributed under a BSD 2-clause license.
 
@@ -13,5 +13,5 @@ See `docs/notes.txt`
 `py snakello.py`
 	
 ## Dependences
-It needs Python 2.7.13 or above
+It needs Python 2.7.15
 See `requirements.txt`

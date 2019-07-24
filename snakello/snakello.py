@@ -20,7 +20,7 @@ import unidecode
 import datetime
 import sys
 
-_RVU = '0.0.11'
+_RVU = '0.0.12'
 _varsnakestatus = 0
 _vtrello = 0
 _vtrello_app_key =''
