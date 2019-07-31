@@ -20,7 +20,7 @@ import unidecode
 import datetime
 import sys
 
-_RVU = '0.0.12'
+_RVU = '0.0.13'
 _varsnakestatus = 0
 _vtrello = 0
 _vtrello_app_key =''
@@ -849,7 +849,6 @@ def fsnakeoldestcard():
 	cards = []
 	date = ''
 	cardname = ''
-	cardid = ''
 	listname = ''
 	
 	cl = _vtrello.boards.get_list(_vcurboar_id)
@@ -867,14 +866,12 @@ def fsnakeoldestcard():
 					if date == '':
 						date = cards[j][u'dateLastActivity']
 						cardname = cards[j][u'name']
-						cardid = cards[j][u'id']
 						listname = cl[i][u'name']
 						# print date, cardname, listname
 					else:
 						if cards[j][u'dateLastActivity'] < date:
 							date = cards[j][u'dateLastActivity']
 							cardname = cards[j][u'name']
-							cardid = cards[j][u'id']
 							listname = cl[i][u'name']
 
 	print "Oldest action was done on the card", "[", cardname, "]", "that is in the list", "[", listname, "]", "on", "[", date, "]"
@@ -929,7 +926,6 @@ def fsnakeprintid():
 	cards = []
 	cardinfo = []
 	listofcard = []
-	sortedlistofcard = []
 	
 	cl = _vtrello.boards.get_list(_vcurboar_id)
 	for i in range(len(cl)):
@@ -955,7 +951,6 @@ def fsnakeexcludecard():
 	global _vexcluded_card
 	global _vcurboar_id
 	s = ''
-	i = 0
 	x = 0
 	
 	if _varsnakestatus == 0:
@@ -976,12 +971,12 @@ def fsnakeexcludecard():
 			s = raw_input('--: ')
 			
 			if s == '-':
-				if len(_vselected_card) > 0:
+				if len(_vexcluded_card) > 0:
 					_vexcluded_card.pop()
 			elif s == '--':
 				_vexcluded_card = []
 			elif s != '':
-				#the id must be 24 char length
+				#the id must be 24 char lengthaa
 				#must exist in the current boar
 				#I should have to manage errors in https request but now I'm not able yet.
 				if len(s) != 24:
