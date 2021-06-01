@@ -5,4 +5,4 @@ idna==2.8
 requests==2.22.0
 trello==0.9.3
 Unidecode==1.1.1
-urllib3==1.25.3
+urllib3==1.26.5
